@@ -1,11 +1,23 @@
-const charactersContainer = document.getElementById('characters')
-const urlApi ='https://pokeapi.co/api/v2/pokemon/'
 
-function displayChara(characters) {
+function fetchpoke(id) {
+    fetch (`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then(res=> res.json())
+    .then(data => console.log(data))
+}
+
+function fetchpokemons(number) {
+    for (let i = 1; i <= number; i++) {
+        fetchpoke(i)
+    }
+}
+fetchpokemons(4)
+
+
+const charaterContainer=document.getElementById('characters')
+function displayCarcters(characters) {
     characters.forEach(character => {
-        const charactersDiv = document.createElement('div')
-
-        charactersDiv.innerHTML= 
+        const characterDiv= document.createElement('div')
+        characterDiv.innerHTML=
         `<div class="card" style="width: 18rem;">
         <img src=" ${character.image}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -18,16 +30,10 @@ function displayChara(characters) {
         <li class="list-group-item">A third item</li>
         </ul>
 `;
-        charactersContainer.appendChild(charactersDiv)
-    })
+    });
 }
-
-fetch(urlApi)
-.then(response => response.json())
-.then( data =>{
-    const characters = data.results
-displayChara(characters)
-}
-) 
-.catch(error => console.log('Error ', error))
-
+// queda crear una funcion, en la que se obtengan los datos de la api 
+// ya que tengas la funcion la mandas a llamar dentro del html de js 
+// al parecer si se pueden mandar a llamar las funciones desde ahi 
+// ve a chat y dejaste un video (10;51) ahi explica como crear esa funcion de llamado 
+// https://www.youtube.com/watch?v=59Jq_T7G4y4
