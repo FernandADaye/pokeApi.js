@@ -17,14 +17,22 @@ body{
 #searchInput{
 justify-content: center;
 align-items: center;
+background-color: rgba(134, 155, 248, 0.356);
+background-image: linear-gradient(to left,rgba(176, 218, 247, 0.432),rgba(143, 66, 153, 0.445));
+
 }
 #search{
     display: flex;
     width: 100%;
-    background-color: rgb(87, 87, 87);
-    height: 15%;
+    background-image:url(/004188dc506120dd8343502d34e9db17.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: linear-gradient(to left,rgb(176, 218, 247),rgb(38, 67, 105));
+    height: 25%;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+
 }
 #characters{
     width: auto;
@@ -35,9 +43,23 @@ align-items: center;
     height: auto;
     justify-content: space-evenly;
     padding: 5%;
+
 }
 .charactersDiv{
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.card-img-top{
+    max-width: 7rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card{
+    justify-content: center;
+    align-items: center;
+
 }
