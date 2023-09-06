@@ -28,7 +28,7 @@ background-image: linear-gradient(to left,rgba(176, 218, 247, 0.432),rgba(143, 6
     background-repeat: no-repeat;
     background-position: center center;
     background-color: linear-gradient(to left,rgb(176, 218, 247),rgb(38, 67, 105));
-    height: 25%;
+    height: 35%;
     justify-content: center;
     align-items: center;
     background-size: cover;
@@ -43,13 +43,15 @@ background-image: linear-gradient(to left,rgba(176, 218, 247, 0.432),rgba(143, 6
     height: auto;
     justify-content: space-evenly;
     padding: 5%;
+    background-size: cover;
+    
+    background-image: url(/11f07ffca007c0e310b28a06b91aa447.jpg);
 
 }
 .charactersDiv{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .card-img-top{
@@ -61,5 +63,15 @@ background-image: linear-gradient(to left,rgba(176, 218, 247, 0.432),rgba(143, 6
 .card{
     justify-content: center;
     align-items: center;
+}
 
+.card.body{
+justify-content: center;
+font-family: 'Open Sans', sans-serif;
+}
+.list-group-item{
+    font-family: 'Open Sans', sans-serif;
+
+}
+.pokemon{
 }

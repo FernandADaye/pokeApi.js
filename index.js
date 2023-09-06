@@ -13,11 +13,11 @@ function seePokemon(data) {
     createDiv.classList.add("pokemon")
     createDiv.innerHTML=`
     <div class="card" style="width: 14rem; margin-bottom: 20px;">
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="card-img-top" alt="...">
+    <img src="${data.sprites.front_default}" class="card-img-top" alt="...">
     <div class="card-body">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"> ${data.name} </li>
-            <li class="list-group-item">A second item</li>
+            <li class="list-group-item"> Nombre: ${data.name} </li>
+            <li class="list-group-item"> ID: ${data.id }</li>
             <li class="list-group-item">A third item</li>
         </ul> 
     </div>
