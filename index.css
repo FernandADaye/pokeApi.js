@@ -71,7 +71,14 @@ font-family: 'Open Sans', sans-serif;
 }
 .list-group-item{
     font-family: 'Open Sans', sans-serif;
-
+    font-size: small;
+    text-transform: uppercase;
 }
-.pokemon{
+#searchButton{
+display: flex;
+justify-content: center;
+justify-content: center;
+align-items: center;
+background-color: rgba(134, 155, 248, 0.356);
+background-image: linear-gradient(to left,rgba(176, 218, 247, 0.432),rgba(143, 66, 153, 0.445));
 }
