@@ -11,6 +11,10 @@ for (let i = 1; i <= 800; i++){
     
 }
 function seePokemon(data) {
+
+    let typess= data.types.map((type)=> `<p class="text">${type.type.name} </p>`);
+    typess= typess.join('');
+
     const createDiv= document.createElement("div");
     createDiv.classList.add("pokemon")
     createDiv.innerHTML=`
@@ -20,13 +24,14 @@ function seePokemon(data) {
         <ul class="list-group list-group-flush">
             <li class="list-group-item"> Nombre: ${data.name} </li>
             <li class="list-group-item"> ID: ${data.id }</li>
-            <li class="list-group-item">A third item</li>
+            ${typess}
         </ul> 
     </div>
 </div>
     `;
     charaterContainer.appendChild(createDiv)
 }
+
 
 searchButton.addEventListener('click', () => {
     const searchTerm = searchInput.value.toLowerCase();
